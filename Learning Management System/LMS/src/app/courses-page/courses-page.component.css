@@ -1,0 +1,123 @@
+
+/*=====================================================
+    20. PAGE BANNER  css
+======================================================*/
+
+[data-overlay] {
+	position: relative;
+}
+[data-overlay]::before {
+	background: #07294d none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+[data-overlay="8"]::before {
+	opacity: 0.8;
+}
+
+.page-banner-cont{
+    position: relative;
+    z-index: 5;
+}
+.page-banner-cont h2{
+    font-size: 52px;
+    color: #fff;
+    padding-bottom: 15px;
+}
+.page-banner-cont .breadcrumb{
+    background: none;
+}
+.page-banner-cont .breadcrumb .breadcrumb-item {
+	color: #ffc600;
+	font-size: 18px;
+	font-weight: 600;
+}
+.page-banner-cont .breadcrumb .breadcrumb-item a{
+    color: #fff;
+}
+.page-banner-cont .breadcrumb-item + .breadcrumb-item::before {
+	color: #fff;
+	content: "/";
+    font-size: 18px;
+}
+
+.bg_cover {
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/*=====================================================
+    22. COURSES PAGE css
+======================================================*/
+
+.singel-course > .thum{
+    position: relative;
+}
+.singel-course .thum .image{
+    overflow: hidden;
+}
+.singel-course .thum .image img{
+    width: 100%;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+.singel-course:hover .thum .image img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.singel-course .thum .price{
+    position: absolute;
+    right: 60px;
+    bottom: -24px;
+}
+ .price {
+    font-size: 14px;
+    color: #07294d;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    background-color: #ffc600;
+    text-align: center;
+}
+.singel-course .cont{
+    padding-top: 28px;
+    padding-bottom: 34px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.singel-course .cont > ul{
+    display: inline-block;
+    margin-right: 10px;
+}
+.singel-course .cont ul li{
+    display: inline-block;
+    margin: 1px;
+    color: #ffc600;
+}
+
+
+
+.singel-course .cont h4{
+    font-weight: 600;
+    font-size: 24px;
+    color: #000;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+.singel-course .cont h4:hover{
+    color: #ffc600;
+}

@@ -1,0 +1,14 @@
+
+<div class="addreq">
+    <form class="form" [formGroup]="addstudentform">
+      <h1 class ="header" > Add New Student </h1>
+
+      <input formControlName="Student_ID" type="number" placeholder=" Student-ID "><br>
+      <input formControlName="Student_Name" type="text" placeholder=" Student-Name"><br>
+      <input formControlName="University_Major" type="text" placeholder="Student-Major"><br>
+
+      <button  routerLink="/our-students" routerLinkActive="active" (click)="onSave()" type="submit" class="main-btn"> Save New Student Info</button>
+
+    </form>
+
+  </div>

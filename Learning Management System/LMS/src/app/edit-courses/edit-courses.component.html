@@ -1,0 +1,20 @@
+<div class="login-box">
+  <h2>Edit Courses</h2>
+  <form class="form" [formGroup]="editCourseForm">
+    <div class="user-box">
+      <input name="" required="" formControlName="Course_Name" type="text">
+      <label>Course_Name</label>
+    </div>
+    <div class="user-box">
+      <input name="" required="" formControlName="PlayList" type="text">
+      <label>PlayList</label>
+    </div>
+    <a routerLink="/courses" routerLinkActive="active" (click)="editCourse()" type="submit" >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Edit
+    </a>
+  </form>
+</div>

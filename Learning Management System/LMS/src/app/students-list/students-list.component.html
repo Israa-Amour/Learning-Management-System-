@@ -1,0 +1,44 @@
+<section id="page-banner" class="bg_cover" data-overlay="8" style="background-image: url(https://images.squarespace-cdn.com/content/v1/55371ac3e4b08f12059e3112/1532599756843-6OSSFZMMD0AN41VM9N8J/ke17ZwdGBToddI8pDm48kC8JC4Q4h84i9ov0G-DDHKp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UZ9Jot_lGd-HL6mcFKgpavCJmPCskEJJzRVYUqkC7rWIl_ZyxmVwDHX_BLq1V-e4VA/IMG_2457.jpg?format=2500w)" >
+  <br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2>Our Student</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Our Student</li>
+                      </ol>
+                  </nav>
+              </div>  <!-- page banner cont -->
+          </div>
+      </div> <!-- row -->
+  </div> <!-- container -->
+  <br><br><br>
+</section>
+<div class="student-list">
+    <h2 class="header">
+        <div> Student ID </div>
+        <div> Student Name </div>
+        <div> University_Major </div>
+    </h2>
+    <div class=" list-item " *ngFor="let student of studentlist ">
+        <div >
+            {{student.Student_ID}}
+        </div>
+        <div >
+            {{student.Student_Name}}
+        </div>
+        <div>
+            {{student.University_Major}}
+        </div>
+      <button type="button" class="btn btn-light" routerLink="/Success" routerLinkActive="active"
+      (click)="deletestudent(student.Student_ID)" > Delete Student</button>
+      <button type="button" class="btn btn-light" [routerLink]="['/students/edits',student.Student_ID]">Edit Student info</button>
+    </div>
+    <br><br>
+    <button routerLink="/student/add" routerLinkActive="active" type="submit" class="main-btn mr-2">ADD NEW STUDENT</button>
+</div>
+
+

@@ -1,0 +1,115 @@
+
+/*=====================================================
+    20. PAGE BANNER  css
+======================================================*/
+
+[data-overlay] {
+	position: relative;
+}
+[data-overlay]::before {
+	background: #07294d none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+[data-overlay="8"]::before {
+	opacity: 0.8;
+}
+
+.page-banner-cont{
+    position: relative;
+    z-index: 5;
+}
+.page-banner-cont h2{
+    font-size: 52px;
+    color: #fff;
+    padding-bottom: 15px;
+}
+.page-banner-cont .breadcrumb{
+    margin: 0;
+    background: none;
+    padding: 0;
+}
+.page-banner-cont .breadcrumb .breadcrumb-item {
+	color: #ffc600;
+	font-size: 18px;
+	font-weight: 600;
+}
+.page-banner-cont .breadcrumb .breadcrumb-item a{
+    color: #fff;
+}
+.page-banner-cont .breadcrumb-item + .breadcrumb-item::before {
+	color: #fff;
+	content: "/";
+    font-size: 18px;
+}
+
+.bg_cover {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.gray-bg {
+    background: #edf0f2;
+}
+/*=====================================================
+    24. EVENT PAGE css
+======================================================*/
+
+.singel-event-list{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    -ms-align-items: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.singel-event-list .event-thum {
+	width: 38%;
+}
+.singel-event-list .event-thum img{
+    width: 100%;
+    border-radius: 5px;
+}
+.singel-event-list .event-cont {
+	width: 62%;
+    padding-left: 30px;
+}
+
+.singel-event-list .event-cont span {
+	font-size: 14px;
+	color: #8a8a8a;
+	margin-right: 20px;
+}
+.singel-event-list .event-cont span i {
+	color: #ffc600;
+	margin-right: 3px;
+}
+.singel-event-list .event-cont a {
+	display: block;
+}
+.singel-event-list .event-cont a h4 {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	color: #000;
+	font-size: 20px;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+.singel-event-list .event-cont a:hover h4 {
+    color: #ffc600;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}

@@ -1,0 +1,51 @@
+
+<!-- <input type="search"  [(ngModel)]="search"> -->
+<section id="page-banner" class="bg_cover" data-overlay="8" style="background-image: url(https://media.gettyimages.com/vectors/students-related-vector-illustration-for-landing-page-template-and-vector-id1273359032)" >
+  <br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="page-banner-cont">
+                  <h2>Our Teacher</h2>
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Our Teacher</li>
+                      </ol>
+                  </nav>
+              </div>  <!-- page banner cont -->
+          </div>
+      </div> <!-- row -->
+  </div> <!-- container -->
+  <br><br><br>
+</section>
+
+
+
+<div class="teacher-list">
+    <h2 class="header">
+        <div> Teacher ID</div>
+        <div> Teacher Name </div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </h2>
+    <div class=" list-item " *ngFor="let teacher of (teacherlist | filter:search)">
+        <div >
+            {{teacher.Admin_ID}}
+        </div>
+        <div></div>
+        <div >
+            {{teacher.Admin_Name}}
+        </div>
+        <button type="button" class="btn btn-light" routerLink="/our-teacher" routerLinkActive="active" (click)="deleteteacher(teacher.Admin_ID)">Delete</button>
+        <button type="button" class="btn btn-light" routerLink="/edit-teacher" routerLinkActive="active" >Edit</button> 
+        <button type="button" class="btn btn-light"[routerLink]="['/edit-teacher',teacher.Admin_ID]" >Edit</button>
+    </div>
+    <div *ngIf="(teacherlist | filter:search).length < 1">
+        Not Found
+      </div>
+    <br>
+    <br>
+    <button routerLink="/teacher/add" routerLinkActive="active" type="submit" class="main-btn mr-2">Add New Teacher</button>
+</div>

@@ -1,0 +1,46 @@
+
+
+
+<section id="contact-page" class="gray-bg">
+  <br><br><br>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8">
+              <div class="course-from">
+                  <div class="section-title">
+                      <h1>Add new Course</h1>
+                  </div>
+                  <div class="main-form pt-45">
+                      <form id="course-form" [formGroup] = " AddCourseForm">
+
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <div class="singel-form form-group">
+                                      <input formControlName="Course_Name" type="text" name="course-name" type="text" placeholder="Your Course Name" required="required">
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="singel-form form-group">
+                                      <input formControlName="Course_Number"  type="text" name="course-number" type="text" placeholder="Your course Number" required="required">
+                                  </div>
+                              </div>
+                              <div class="col-md-12">
+                                  <div class="singel-form form-group course-PlayList">
+                                      <input formControlName="PlayList" type="text" name="course-PlayList"  placeholder="Your course PlayList"  required="required">
+                                  </div>
+                              </div>
+                              <div class="col-md-12">
+                                  <div class="singel-form">
+                                      <button  routerLink="/courses-list" routerLinkActive="active" (click)="onSave()" type="submit" class="main-btn">Save Course</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div> <!-- main form -->
+              </div> <!--  contact from -->
+          </div>
+      </div>
+  </div>
+  <br><br><br>
+
+</section>

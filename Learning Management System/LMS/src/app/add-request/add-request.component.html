@@ -1,0 +1,17 @@
+
+<div class="addreq">
+  <form class="form" [formGroup]="addRequestForm">
+    <h1 class ="header" > STUDENT REQUEST  </h1>
+
+    <input formControlName="Student_Student_ID" type="number" placeholder=" Student ID "><br>
+    <input formControlName="Admin_Admin_ID" type="number" placeholder=" Mentor ID"><br>
+    <input formControlName="Course_Number" type="number" placeholder="Course Number"><br>
+    <input formControlName="Course_Name" type="text" placeholder="Course Name "><br>
+    <input formControlName="Section_Number" type="number" placeholder="Section Number"><br>
+    <input formControlName="Reaquest_status" type="text" placeholder="Reaquest_status"><br>
+
+    <button  routerLink="/viewRequest" routerLinkActive="active" (click)="onSave()" type="submit" class="main-btn">Save Request</button>
+
+  </form>
+
+</div>
